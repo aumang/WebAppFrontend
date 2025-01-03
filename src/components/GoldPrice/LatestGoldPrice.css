@@ -1,0 +1,33 @@
+.gold-price-card {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.gold-price-card h2 {
+    font-size: 20px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.gold-price-card .price,
+.gold-price-card .timestamp {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.gold-price-card .price span {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.gold-price-card .timestamp span {
+    font-style: italic;
+    color: #6c757d;
+}
