@@ -17,7 +17,7 @@ export default function UpdateGoldPrice(){
         };
 
         try {
-            const response = await fetch('http://localhost:5156/api/GoldPrice/update-gold-price', {
+            const response = await fetch('http://localhost:5158/api/GoldPrice/update-gold-price', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ export default function UpdateGoldPrice(){
 
     return(
         <div className="container mt-4">
-            <h2 className="text-center mb-3">Update Gold Price</h2>
+            <h2 className="text-center mb-3">Update Product Price</h2>
             <form onSubmit={handleSubmit} className="p-3 bg-light rounded shadow-sm">
                 <div className="mb-3 d-flex align-items-center">
                     <label className="form-label me-3" htmlFor="price" style={{ width: '120px' }}>

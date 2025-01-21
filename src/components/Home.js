@@ -16,7 +16,7 @@ export default function Home(){
             {userList.map((el,index)=>{
                 return (
                     <div key={index}>
-                        {el.id} - {el.name} - {el.username}
+                        {el.id} - {el.name} - {el.username} - {index}
                     </div>
                 );
             })}

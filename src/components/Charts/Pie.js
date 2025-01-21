@@ -13,7 +13,21 @@ import {
  );
 
  export default function PieGraph({data}){
-    const options = {};
+    const options = {
+      responsive: true,  // Make it responsive to the container size
+      aspectRatio: 2,
+      plugins: {
+          legend: {
+              position: 'right',
+          },
+      },
+      cutout: '30%',  // Controls the inner cutout for a donut chart, if desired
+      elements: {
+          arc: {
+              borderWidth: 2, // Adjusts the border width of the pie slices
+          },
+      },
+   };
     return (
         <Pie options={options} data={data}/>
     );

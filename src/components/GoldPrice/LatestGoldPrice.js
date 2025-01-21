@@ -7,7 +7,7 @@ export default function LatestGoldPrice() {
 
     // Initial fetch for the latest price
     useEffect(() => {
-        fetch("http://localhost:5156/api/GoldPrice/latest-gold-price")
+        fetch("http://localhost:5158/api/GoldPrice/latest-gold-price")
             .then((res) => res.json())
             .then((res) => {
                 setGoldPrice(res);
@@ -17,7 +17,7 @@ export default function LatestGoldPrice() {
     // WebSocket connection for real-time updates
     useEffect(() => {
         const connection = new signalR.HubConnectionBuilder()
-            .withUrl("http://localhost:5156/hubs/goldpriceshub")
+            .withUrl("http://localhost:5158/hubs/goldpriceshub")
             .withAutomaticReconnect()
             .build();
 
@@ -41,7 +41,7 @@ export default function LatestGoldPrice() {
 
     return (
         <div className="gold-price-card">
-            <h5 className="card-title text-primary">Latest Gold Price</h5>
+            <h5 className="card-title text-primary">Latest Product Price</h5>
             <p className="price">
                 💰 Price: <span>${goldPrice.price}</span>
             </p>

@@ -7,7 +7,7 @@ export default function LivePriceTracker(){
         labels: [], // Timestamps
         datasets: [
             {
-                label: "Gold Price (USD)",
+                label: "Product Price (USD)",
                 data: [], // Prices
                 borderColor: "rgba(75,192,192,1)",
                 backgroundColor: "rgba(75,192,192,0.2)",
@@ -24,7 +24,7 @@ export default function LivePriceTracker(){
     //     })
     // },[]);
     useEffect(() => {
-    fetch("http://localhost:5156/api/GoldPrice/history")
+    fetch("http://localhost:5158/api/GoldPrice/history")
         .then((res) => res.json())
         .then((res) => {
             // Format the historical data to match chartData structure
@@ -35,7 +35,7 @@ export default function LivePriceTracker(){
                 labels: labels,
                 datasets: [
                     {
-                        label: "Gold Price (USD)",
+                        label: "Product Price (USD)",
                         data: data,
                         borderColor: "rgba(75,192,192,1)",
                         backgroundColor: "rgba(75,192,192,0.2)",
@@ -49,7 +49,7 @@ export default function LivePriceTracker(){
 
     useEffect(()=>{
         const connection = new signalR.HubConnectionBuilder()
-            .withUrl("http://localhost:5156/hubs/goldpriceshub")
+            .withUrl("http://localhost:5158/hubs/goldpriceshub")
             .withAutomaticReconnect()
             .build();
 
